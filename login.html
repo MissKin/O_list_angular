@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>请登录</title>
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	body{
+		font-family:  Microsoft YaHei ;
+	}
+</style>
+</head>
+<body class="loginBody">
+	<div style="z-index: 0px;">
+		<h1>welcome you login!</h1>
+		<div class="login-form">
+			<div class="close"></div>
+			<div class="avtar">
+				<img src="./style/images/avtar.png"/>
+			</div>
+			<form>
+				<input type="text" class="user-input" placeholder="请输入账号" />
+				<input type="password" class="pwd-input" placeholder="请输入密码"/>
+			</form>
+			<div class="signin">
+				<input class="sign-input" type="submit" value="登录" />
+			</div>
+		</div>
+	</div>	
+	<!-- 弹窗 -->
+	<div class="pop_div">
+	<div class="wrap" >
+	  <div id="error_tips">
+	    <h2>成功登录！</h2>
+	    <div class="error_cont">
+	     <p>欢迎登录</p>
+	     <a href="javascript:history.back(-1);" class="pop_btn">返回</a>
+	    </div>
+	  </div>
+	</div>
+	</div>
+</body>
+</html>

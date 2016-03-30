@@ -1,0 +1,44 @@
+<!-- 数据列表 -->
+<div class="mar20_top ">
+	<div id="listDiv" class="right_div">
+		<div class="head_div"><span onclick="addFunction()"class="addbtn cur_pointer">添加</span></div>
+			<div>
+				<div class="xuhao line_height105">
+					<span >1</span>
+				</div>			
+				<div id="fileList1" class="fileList vert_mid" class="banner_left_two">
+				    <img id="fileImg1"width="100%" src="style/images/pic.png"/>
+				    <div class="fileElem">
+				    	<input id="fileElem1" type="file" accept="video/*;capture=camcorder" value=""  onchange="handleFiles(this,1)" style="display:none"/>
+				    </div>
+				</div>
+				<div style="float: left;width: 20%;text-align: center;">
+					<p class="line_height40">宽:152px</p>
+					<p class="line_height40">高:100px</p>
+				</div>
+				<div class="thr_table">
+					<label for="fileElem1" class="right_btnn">修改</label>
+					<div class="right_btnn" onclick="saveFunction()">删除</div>
+				</div>	
+			</div>	
+	</div>
+	<!-- 添加的div -->
+	<div id="addDiv" class="addDiv" style="display: none">
+		<p class="p_txt">请添加banner图片</p>
+		<ul class="ul_right">
+			<li class="ul_li_right">
+				<div id="fileList1" class="fileList" style="float: left;width: 40%;">
+				    <img id="fileImg1" src=""/>
+				    <div class="fileElem">
+				    	<input id="fileElem1" type="file" accept="video/*;capture=camcorder" value=""  onchange="handleFiles(this,1)" style="display:none"/>
+				    </div>
+				</div>	
+				<div class="right_btn">
+					<label for="fileElem1" class="btn_small">  修改</label> <br/>
+					<span class="btn_small cur_pointer" onclick="saveFunction()">保存</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+

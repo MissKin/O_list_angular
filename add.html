@@ -1,0 +1,42 @@
+
+<div class="mar20_left mar20_top">
+	<div id="listDiv">
+		<div class="head_div"><span onclick="addFunction()" class="addbtn cur_pointer">添加</span></div>
+		<div  class="list_line">
+			<div class="left_one">
+				<input type="checkbox" name="choose" />
+			</div>
+			<div id="fileList1" class="fileList vert_mid" class="icon_left_two">
+			    <img id="fileImg1"width="100%" src="style/images/logo.png"/>
+			    <div class="fileElem">
+			    	<input id="fileElem1" type="file" accept="video/*;capture=camcorder" value=""  onchange="handleFiles(this,1)" style="display:none"/>
+			    </div>
+			</div>
+			<div class="right_btn">
+				<label for="fileElem1" class="btn_small">修改</label>
+				<span class="btn_small cur_pointer mar20_left" onclick="saveFunction()">删除</span>
+			</div>	
+		</div>
+	</div>
+<!-- 填写 -->
+	<div id="addDiv" style="display: none;">
+		<p class="p_txt">请添加8个图标</p>
+		<div  class="mar20_left mar20_top">	
+		 <ul class="ul_icon">
+		 	<li class="li_icon">
+				<div id="fileList1" class="fileList mar6_left">
+				    <img id="fileImg1" src=""/>
+				    <div class="fileElem">
+				    	<input id="fileElem1" type="file" accept="video/*;capture=camcorder" value=""  onchange="handleFiles(this,1)" style="display:none"/>
+				    </div>
+				</div>	
+				<div class="txt-center clear_both" >掌上商城</div>
+				<div>
+					<label for="fileElem1" class="btn_small">  修改</label>
+					<label  class="btn_small" onclick="saveFunction()">保存</label>
+				</div>
+			</li>
+		 </ul>
+		</div>
+	</div>
+</div>

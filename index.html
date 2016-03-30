@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style/css/style.css" rel="stylesheet" type="text/css" />
+<script  src="style/js/angular.min.js" ></script>
+<script  src="style/js/angular-ui-router.min.js" ></script>
+<script  src="style/js/app.js" ></script>
+
+
+<style type="text/css">
+	body{margin:0px;font-family: microsoft YaHei;}
+	a{text-decoration: none;}
+	ul,li{list-style: none;padding: 0;margin: 0;}
+</style>
+</head>
+
+<body ng-app="manageApp">
+<div class="header" ng-controller='SelectCtrl'>
+	<div class="header_div">
+		<div class="header_juti">
+			<span><img style="margin-top: 10px;" ng-src="./style/images/logo.png"/></span>
+			<span class="loginTxt"><a class="color_white padd_6" href="#">登录</a>|<a class="color_white padd_6" href="#">注册</a>
+			</span>
+			<div class="ng_select" >
+				结构名称:<select ng-model="selected" ng-options="n for n in jigou">
+				</select>
+			</div>
+		</div>
+	</div>	
+	<!-- select选中之后的显示 -->
+	<div  class="nav" ng-show="selected==jigou[0]">乐信付运维平台</div>	
+	<div  class="nav" ng-show="selected==jigou[1]">梦支付运维平台</div>	
+	<div  class="nav" ng-show="selected==jigou[2]">银安运维平台</div>	
+</div>
+
+<!-- 内容 -->
+<div class="banner_cont" ng-controller="leftController">
+	<div ui-view></div>
+	
+</div>
+<script type="text/javascript" src="style/js/jquery-1.12.1.min.js"></script>
+<script  src="style/js/myjs.js" ></script>
+<script type="text/javascript">
+	$(function active_li() {
+		$(".banner_left ul li a").on('click',function(){
+			var inx = $(this).parent("li").index();
+			console.log(inx);
+			$(".banner_left ul li").find('a').removeClass("active");
+			$(".banner_left ul li").eq(inx).find('a').addClass('active');
+			
+		});
+
+	});
+
+</script>
+<script type="text/javascript">
+	function addFunction() {
+		$("#listDiv").css('display','none');
+		$("#addDiv").css('display','block');
+	}
+	function saveFunction(){
+		$("#listDiv").css('display','table');
+		$("#addDiv").css('display','none');
+	}
+</script>
+</body>
+</html>

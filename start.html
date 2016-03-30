@@ -1,0 +1,34 @@
+<div class="mar20_left mar20_top">
+	<div id="listDiv">
+		<div class="head_div"  ><span onclick="addFunction()" class="addbtn cur_pointer">添加</span></div>
+		<div  class="list_line">
+			<div class="left_one">
+				<input type="checkbox" name="choose" />
+			</div>
+			<div id="fileList1" class="fileList vert_mid" class="icon_left_two">
+			    <img id="fileImg1" width="100%" src="style/images/pic.png"/>
+			    <div class="fileElem">
+			    	<input id="fileElem1" type="file" accept="video/*;capture=camcorder" value=""  onchange="handleFiles(this,1)" style="display:none"/>
+			    </div>
+			</div>
+			<div class="right_btn">
+				<label for="fileElem1" class="btn_small">修改</label>
+				<span class="btn_small cur_pointer mar20_left" onclick="saveFunction()">删除</span>
+			</div>	
+		</div>
+	</div>
+<!-- 启动页1 -->
+	<div id="addDiv" class="start_div" style="display: none">
+	<p class="p_txt">启动页1：</p>	
+		<div id="fileList1" class="starList" >
+		    <img id="fileImg1" src=""/>
+		    <div class="fileElem">
+		    	<input id="fileElem1" type="file" accept="video/*;capture=camcorder" value=""  onchange="handleFiles(this,1)" style="display:none"/>
+		    </div>
+		</div>	
+		<div class="wid_150 mar_auto">
+			<label for="fileElem1" class="btn_small" onclick="saveFunction()">  修改</label>
+			<span class="btn_small"onclick="saveFunction()">保存</span>
+		</div>
+	</div>				
+</div>
